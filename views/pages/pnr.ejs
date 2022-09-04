@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+
+@media screen and (min-width: 480px) {
+  .altform {
+    display:none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .altform {
+    display:block;
+  }
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-train w3-margin-right"></i>Welcome  <%= name %> </b></a>
+  <a href="/logout" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey">Logout</a>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width: 1500px;">
+  <img class="w3-image" src="images/back_bg.jpg" alt="Train" width="1500" height="700">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');">Train</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');">Check PNR</button>
+    </div>
+
+    <!-- Tabs -->
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Search Train</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+      <form method="POST" action="https://enquiry.indianrail.gov.in/ntes/index.html">
+        <div class="w3-full">
+          <input class="w3-input w3-border" type="text" placeholder="Train Number or Name" name="input">
+        </div>
+      </div>
+      <p><button class="w3-button w3-dark-grey">Search</button></p>
+      </form>
+    </div>
+
+    <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Check PNR</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+      <form method="POST" action="http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en">
+        <div class="w3-full">
+          <input class="w3-input w3-border" type="text" placeholder="Enter valid PNR" name="input">
+        </div>
+      </div>
+      <p><button class="w3-button w3-dark-grey">Search</button></p>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- Alternate form when device width is small  -->
+<div class="w3-container altform w3-mobile">
+  <div class="w3-container w3-white w3-padding-16">
+    <h3>Search Train</h3>
+    <div class="w3-row-padding" style="margin:0 -16px;">
+    <form method="POST" action="https://enquiry.indianrail.gov.in/ntes/index.html">
+      <div class="w3-full">
+        <input class="w3-input w3-border" type="text" placeholder="Train Number or Name" name="input">
+      </div>
+    </div>
+    <p><button class="w3-button w3-dark-grey">Search</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Alternate form when device width is small -->
+<div class="w3-container altform w3-mobile">
+  <div class="w3-container w3-white w3-padding-16">
+    <h3>Check PNR</h3>
+    <div class="w3-row-padding" style="margin:0 -16px;">
+    <form method="POST" action="http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en">
+      <div class="w3-full">
+        <input class="w3-input w3-border" type="text" placeholder="Enter valid PNR" name="input">
+      </div>
+    </div>
+    <p><button class="w3-button w3-dark-grey">Search</button></p>
+    </form>
+  </div>
+</div>
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+</script>
+
+</body>
+</html>

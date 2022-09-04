@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <%- include('./partials/styles') %>
+  </head>
+
+  <body style="background-color: #666666;">
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <%- include(`../pages/${template}`)%>
+
+          <div class="login100-more" style="background-image: url('images/sub.jpg');"></div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/script') %>
+  </body>
+</html>

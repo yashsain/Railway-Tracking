@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <title><%= title %></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <style>
+    body,
+    h1 {
+      font-family: 'Raleway', sans-serif;
+    }
+    body,
+    html {
+      height: 100%;
+    }
+    .bgimg {
+      background-image: url('/images/img_bg.jpg');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <div class="w3-display-top w3-xlarge">
+        <div class="w3-bar w3-light-grey w3-border">
+          <div class="w3-bar w3-light-grey">
+            <a href="/" class="w3-bar-item w3-button"><i class="material-icons">home</i></a>
+            <a href="/login" class="w3-bar-item w3-button w3-hide-small">Sign-in</a>
+            <a href="/register" class="w3-bar-item w3-button w3-hide-small">Register</a>
+            <a
+              href="javascript:void(0)"
+              class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+              onclick="myFunction()"
+              >&#9776;</a
+            >
+          </div>
+
+          <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+            <a href="/login" class="w3-bar-item w3-button">Sign-in</a>
+            <a href="/register" class="w3-bar-item w3-button">Register</a>
+          </div>
+        </div>
+      </div>
+      <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">WELCOME TO RAILWAYS</h1>
+        <hr class="w3-border-grey" style="margin: auto; width: 40%;" />
+        <p class="w3-large w3-center">
+          <a href="/login" class="w3-button w3-card w3-white">Sign-in</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById('demo');
+        if (x.className.indexOf('w3-show') == -1) {
+          x.className += ' w3-show';
+        } else {
+          x.className = x.className.replace(' w3-show', '');
+        }
+      }
+    </script>
+  </body>
+</html>
