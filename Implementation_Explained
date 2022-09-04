@@ -1,0 +1,47 @@
+Implementation information :
+
+Frontend =>
+Layout : HTML, CSS, W3.CSS, Bootstrap
+Programming Language : Javascript
+
+Backened =>
+Programming Language : Javascript ( Nodejs : Javascript Framework for server side )
+Framework : Express (=> Nodejs Framework )
+Database :  Created and managed by custom functions 
+            File : /data/userdata.json => contains userdata in json format.
+            Managing Function directory and files : /service/{ loginservice.js and registerservice.js }
+
+
+File Management information :
+
+/data : contain database files
+        /userdata.json : contain user information.
+/node_modules : will be created once you setup the project
+                contain all dependecies for project for Backened.
+/public :   contain all Frontend static dependecies.
+            CSS,Javascript files,Images,etc for frontened control.
+/routes :   routing files using express Framework.
+            routes for navigation between pages.
+            contains Backened code for control of app.
+/service :  database Managing files directory
+/view   :   contains "ejs" template view engine style files for dynamic frontened.
+
+package.json :  contains all information for project for termnal control.
+                dependecies and version information.
+package-lock.json : dependecies detailed and version information.
+server.js : initializing project dependecies for running server.
+
+
+
+
+Sir, As I have already informed you about my API failure due to lockdown in the country.But I have made reference to the government site i.e; whenever you type a valid train name or pnr no., it will take you to the government railway site and then you can fetch any data.I will make this api work as soon as the lockdown is over. Until then I request you to please accept this.
+
+There is one more request I want to make to you that I have designed a "Forgot Password" file but it works when active internet connection is given otherwise it causes the website to crash thus, I want you to consider this fact while running my site and then evaluate it.
+
+
+
+
+THINGS I WAS NOT ABLE TO INCLUDE
+Sir, I am very sorry that some parts I was unable to include in my website becaues of low internet connectivity(I could not study that part) and some apis for ex- "language change" was not provided.I make big promises earlier but I am really sorry for that.
+
+
